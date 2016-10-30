@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project( sequentialColorFilter )
+find_package( OpenCV REQUIRED )
+find_package( Qt4 4.8.6 REQUIRED QtGui )
+add_executable( sequentialColorFilter main.cpp ImageFilter.h ImageFilter.cpp )
+target_link_libraries( sequentialColorFilter ${OpenCV_LIBS} )
+target_link_libraries( sequentialColorFilter pthread)
+target_link_libraries( sequentialColorFilter Qt4::QtGui)
